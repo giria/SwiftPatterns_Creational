@@ -1,0 +1,25 @@
+//: [Previous](@previous)
+
+
+/*:
+ # Singleton
+ 
+ The singleton pattern is a software design pattern that restricts the instantiation of a class to one "single" instance. This is useful when exactly one object is needed to coordinate actions across the system.
+   
+   What problems solves?
+ - Ensure that a class only has one instance
+ - Easily access the sole instance of a class
+ - Control its instantiation
+ - Restrict the number of instances
+ - Access a global variable
+ 
+ ## Criticism
+ Critics consider the singleton to be an anti-pattern as it introduces global state into an application, often unnecessarily. This in turn can place restrictions on any abstraction that uses the singleton, for example by preventing concurrent use of multiple instances. Furthermore, because it is often exposed as a globally visible accessor, its presence complicates dependency analysis by introducing a potential dependency on the singleton in all code it is visible to, thus requiring analysis of implementation details to determine if a dependency actually exists.[
+
+ Singletons also violate the single-responsibility principle, because not only are they responsible for the singleton's normal task, it must also ensure that only one is instantiated; note that this relies on a "classic" singleton definition where it is responsible for enforcing its own uniqueness through, for example, a static getInstance() method.
+
+ Another drawback is that singletons are difficult to test[dubious – discuss] because they carry global state for the duration of the program[dubious – discuss]. Specifically, because unit testing requires loosely coupled classes in order to isolate what's being tested. Additionally, when a certain class interacts with a singleton, that class and the singleton become tightly coupled[dubious – discuss], making it impossible to test the class on its own without also testing the singleton
+ 
+ */
+
+
