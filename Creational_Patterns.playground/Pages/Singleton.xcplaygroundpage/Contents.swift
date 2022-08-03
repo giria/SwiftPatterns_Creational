@@ -22,4 +22,35 @@
  
  */
 
+import Foundation
 
+final public class AppSettings {
+    private var settings: [String: Any] = [:]
+    
+    public static let shared = AppSettings()
+    
+    //private let serialQueue = DispatchQueue(label: "serialQueue")
+    private let concurrentQueue = DispatchQueue(label: "concurrentQueue", attributes: .concurrent)
+    
+    private init() {}
+    
+    public func set(_ value: Any, forKey key: String) {
+        //serialQueue.sync {
+        concurrentQueue.async( flags: .barrier ) {
+            self.settings[key] = value
+        }
+    }
+    
+    public func object(forKey key: String) -> Any? {
+        var result: Any?
+        //serialQueue.sync {
+        concurrentQueue.sync {
+            result = settings[key]
+        }
+        return result
+    }
+    
+    public func reset() {
+        settings.removeAll()
+    }
+}
