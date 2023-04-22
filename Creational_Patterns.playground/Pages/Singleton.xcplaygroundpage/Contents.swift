@@ -2,6 +2,10 @@
 
 
 /*:
+ 
+ Creational design patterns provide various object creation mechanisms, which increase flexibility and reuse of existing code.
+ 
+ 
  # Singleton
  
  The singleton pattern is a software design pattern that restricts the instantiation of a class to one "single" instance. This is useful when exactly one object is needed to coordinate actions across the system.

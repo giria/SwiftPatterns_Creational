@@ -3,6 +3,12 @@
  
  The intent of the Builder design pattern is to separate the construction of a complex object from its representation.
   ![builder](builder.png)
+ 
+ 
+ See more:
+ [A good explanation](https://medium.com/swift2go/builder-pattern-in-swift-for-beginners-79415d30872e)
+ 
+ 
  */
 
 func createBuilder(configuration: [String: String]) -> LaptopBuilder? {

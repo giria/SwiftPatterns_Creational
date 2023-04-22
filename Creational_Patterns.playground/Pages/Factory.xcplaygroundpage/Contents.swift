@@ -2,7 +2,11 @@
 
 
 
+
 /*:
+ 
+ **The client is decoupled from any of the specifics of the concrete object obtained from the factory.**
+
  
    Decouples the caller from concrete types.
  Promotes loose coupling
@@ -13,6 +17,8 @@
  
  ![Factory Method](factory.png)
  
+ 
+ See a good [explanation](https://medium.com/@activesludge/factory-design-pattern-in-swift-for-beginners-b6d116799033)
  */
 import UIKit
 
